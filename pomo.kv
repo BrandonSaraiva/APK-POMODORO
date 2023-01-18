@@ -1,0 +1,93 @@
+#: import main main
+
+<Timer>:
+    displayLabel:displayLabel
+    cycleLabel:cycleLabel
+    completeLabel: completeLabel
+    statusLabel:statusLabel
+    main_btn:main_btn
+    reset:reset
+    
+    canvas.before:
+        Color:
+            rgba: 255/255, 250/255, 205/255, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        size: self.parent.size
+        pos: self.parent.pos
+
+        ActionBar:
+            background_image: 'Resources/blur.jpg'
+            ActionView:
+                ActionPrevious:
+                    title: 'Pomodoro App'
+                    with_previous: False
+
+        Label:
+            id:displayLabel
+            text: root.conversor_tempo()
+            font_size: 100
+            color: 20/255, 44/255, 55/255, 1
+
+        Label:
+            id: statusLabel
+            text: 'Status: ' + root.sequencia[root.ciclo]
+            color: 50/255, 4/255, 5/255,1
+            font_size: 25
+
+        Label:
+            text: ''
+            color: 10/255, 1/255, 2/255,1
+
+        Label:
+            id: cycleLabel
+            text: 'Ciclos completados: 0/4'
+            color:  255/255, 1/255, 2/255,1
+            font_color: ''
+            font_size: 25
+
+        Label:
+            id: completeLabel
+            text: 'Zerou: 0'
+            color: 0/255, 14/255, 255/255,1
+            font_color: ''
+            font_size: 25
+        
+        ## KIVY MAIN BUTTONS
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 10
+            size_hint: 1, .8
+
+            Button:
+                on_release: root.break_button()
+                background_normal: './Resources/skip.jpg'
+                background_down: './Resources/skip.jpg'
+
+            Button:
+                id: main_btn
+                on_release: root.start_button()
+                background_normal: './Resources/play.jpg'
+                background_down: './Resources/play.jpg'
+
+            Button:
+                id: reset
+                disabled: True
+                on_release: root.reset_button()
+                background_disabled_normal: './Resources/no.png'
+                background_normal: './Resources/reload.jpg'
+                background_down: './Resources/reload.jpg'
+
+#########################################################################
+Manager:
+    TimerScreen:
+###########################################################################
+<TimerScreen>:
+    name: "timer"
+    Timer
+###################################################################################
