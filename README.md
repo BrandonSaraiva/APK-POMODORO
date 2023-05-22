@@ -1,6 +1,6 @@
 # Sobre o App Pomodoro
 
-Aplicativo que fiz para uso pessoal por ter me frustrado bastante com outros aplicativos da play store de Pomodoro. A interface é intencionalmente doida e coisada. Na pasta APLICATIVO_CELL se encontra o .pkg onde você pode baixar no seu telefone e utilizar a vontade o aplicativo. Conseguir transformar o main.py em um executavel .pkg foi muito mais difícil do que construir o própio aplicativo no python 😓(peguei diversas interfaces e contadores na internet e fui fazendo uma mistura até sair esse aplicativo), foram cerca de 9 horas tentando diversos metodos e configurando coisas muito especificas no arquivo .spec até realmente conseguir funcionar o .pkg  .Segue o vídeo e o site que mais ajudou: 
+Aplicativo que fiz para uso pessoal por ter me frustrado bastante com outros aplicativos da play store relacionado a pomodoro. A interface é intencionalmente simples e única. Na pasta APLICATIVO_CELL se encontra o .pkg onde você pode baixar no seu telefone e utilizar a vontade o aplicativo. Conseguir transformar o main.py em um executavel .pkg foi muito mais difícil do que construir o própio aplicativo no python 😓(peguei diversas interfaces e contadores na internet e fui fazendo uma mistura até sair esse aplicativo), foram cerca de 9 horas tentando diversos metodos e configurando coisas muito especificas no arquivo .spec até realmente conseguir funcionar o .pkg  .Segue o vídeo e o site que mais ajudou: 
 
 **Vídeo:** https://www.youtube.com/watch?v=GTkKul8sA-c
 
